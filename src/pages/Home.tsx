@@ -17,11 +17,12 @@ export default function PageHome() {
                 <Grid item xs={12} md={3}>
                     <Card sx={{
                         mr: {
-                            sm: 2,
-                            xs: 0
+                            md: 2,
+                            sm: 0
                         },
                         mb: {
-                            sm: 0,
+                            md: 0,
+                            sm: 2,
                             xs: 2
                         }
                     }}>
