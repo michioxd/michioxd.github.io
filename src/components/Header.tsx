@@ -62,7 +62,8 @@ const NavItem = ({ icon, primaryText, secondaryText, color, to }: NavType) => {
         <Button sx={{
             ml: 1, display: {
                 md: 'inherit',
-                sm: 'none'
+                sm: 'none',
+                xs: 'none'
             }
         }} component={LinkRouter} to={to}>
             <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
@@ -131,7 +132,8 @@ export default function Header() {
                             <IconButton sx={{
                                 display: {
                                     md: 'none',
-                                    sm: 'inherit'
+                                    sm: 'inherit',
+                                    xs: 'inherit'
                                 }
                             }}
                                 onClick={() => setOpenDrawer(true)}>
