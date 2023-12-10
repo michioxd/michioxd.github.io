@@ -1,0 +1,21 @@
+.Home {
+    .HomeMain {
+        position: relative;
+
+        .Background {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)), url('../assets/img0.webp');
+            background-position: top;
+            background-size: cover;
+            width: 100%;
+            position: absolute;
+            height: 200px;
+            z-index: 0;
+        }
+
+        .HomeContent {
+            z-index: 9;
+            position: relative;
+            margin-top: 150px;
+        }
+    }
+}
