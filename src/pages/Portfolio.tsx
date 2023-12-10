@@ -45,9 +45,8 @@ const List = [
         type: "Extension",
         description: "A better Dark theme for SoundCloud",
         tech: [
-            "React",
-            "Node.js",
-            "Frontend"
+            "JavaScript",
+            "Chromium"
         ],
         buttons: [
             {
