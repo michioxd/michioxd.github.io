@@ -36,7 +36,26 @@ const SocialList: {
         }
     ];
 
+const padZero = (num: number) => (num < 10 ? "0" + num : num);
+
 export default function Footer() {
+    const commitDate = new Date(parseInt(__COMMIT_DATE__) * 1000);
+
+    const formattedBuild =
+        __COMMIT_HASH__ +
+        " (" +
+        padZero(commitDate.getHours()) +
+        ":" +
+        padZero(commitDate.getMinutes()) +
+        ":" +
+        padZero(commitDate.getSeconds()) +
+        " " +
+        padZero(commitDate.getDate()) +
+        "-" +
+        padZero(commitDate.getMonth() + 1) +
+        "-" +
+        commitDate.getFullYear() + ")";
+
     return (
         <div className={cls.Footer}>
             <Container>
@@ -62,11 +81,14 @@ export default function Footer() {
                             Michio da nekoooo!!!
                         </Typography>
                         <Typography mb={1} fontSize="10px" variant="body2">aka Mashiro</Typography>
-                        <Typography variant="body2">
+                        <Typography fontSize="12px" variant="body2">
                             &copy; 2023 michioxd. Built with <Link color="inherit" target="_blank" href="https://vitejs.dev/guide/#getting-started">React + Vite + TypeScript</Link> + <Link title="Open Source license" component={LinkRouter} to="/opensource-license" color="inherit">deps</Link>
                         </Typography>
-                        <Typography fontSize="12px" variant="body2">
+                        <Typography fontSize="10px" variant="body2">
                             This site is available on my <Link color="inherit" target="_blank" href="https://github.com/michioxd/michioxd.github.io">GitHub Repository</Link>.
+                        </Typography>
+                        <Typography variant="body2" fontSize="8px">
+                            Commit: <Link color="inherit" target="_blank" href={"https://github.com/michioxd/michioxd.github.io/commit/" + __COMMIT_HASH__}>{formattedBuild}</Link>
                         </Typography>
                     </Box>
                 </Box>
