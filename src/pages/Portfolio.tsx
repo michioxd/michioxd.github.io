@@ -8,32 +8,10 @@ import SOUNDDARK from './../assets/portfolio/sounddark.png';
 import GSVN from "./../assets/portfolio/gamestorevn.com_.png";
 import TinyDRPC from "./../assets/portfolio/tinydrpc.png";
 import tcvn2uni from "./../assets/portfolio/tcvn2uni.png";
+import nyanspace from "./../assets/portfolio/nyanspace.png";
+
 const List = [
-    {
-        image: SOUNDDARK,
-        name: "SoundDark",
-        type: "Extension",
-        description: "A better Dark theme for SoundCloud",
-        tech: [
-            "JavaScript",
-            "Chromium",
-            "Firefox"
-        ],
-        buttons: [
-            {
-                name: "GitHub",
-                url: "https://github.com/michioxd/sounddark"
-            },
-            {
-                name: "MS Store",
-                url: "https://microsoftedge.microsoft.com/addons/detail/sounddark/mdjnpmfeinnmbhanpikmfcbigpnjcplj"
-            },
-            {
-                name: "Firefox Add-ons",
-                url: "https://addons.mozilla.org/en-US/firefox/addon/sounddark/"
-            }
-        ]
-    },
+
 
     {
         image: TinyDRPC,
@@ -70,6 +48,51 @@ const List = [
             {
                 name: "GitHub",
                 url: "https://github.com/michioxd/tcvn2uni"
+            }
+        ]
+    },
+    {
+        image: nyanspace,
+        name: "nyanspace",
+        type: "Android",
+        description: "An Android app to manage your Linux server via SSH. There is no need to install anything (e.g., endpoint api, etc.) on your server.",
+        tech: [
+            "TypeScript",
+            "React Native"
+        ],
+        buttons: [
+            {
+                name: "GitHub",
+                url: "https://github.com/michioxd/nyanspace"
+            },
+            {
+                name: "Download",
+                url: "https://github.com/michioxd/nyanspace/releases/latest"
+            }
+        ]
+    },
+    {
+        image: SOUNDDARK,
+        name: "SoundDark",
+        type: "Extension",
+        description: "A better Dark theme for SoundCloud",
+        tech: [
+            "JavaScript",
+            "Chromium",
+            "Firefox"
+        ],
+        buttons: [
+            {
+                name: "GitHub",
+                url: "https://github.com/michioxd/sounddark"
+            },
+            {
+                name: "MS Store",
+                url: "https://microsoftedge.microsoft.com/addons/detail/sounddark/mdjnpmfeinnmbhanpikmfcbigpnjcplj"
+            },
+            {
+                name: "Firefox Add-ons",
+                url: "https://addons.mozilla.org/en-US/firefox/addon/sounddark/"
             }
         ]
     },
