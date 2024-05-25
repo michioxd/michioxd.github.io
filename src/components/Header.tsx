@@ -6,9 +6,9 @@ import { Link as LinkRouter } from "react-router-dom";
 
 import CottageOutlinedIcon from '@mui/icons-material/CottageOutlined';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
-import RssFeedIcon from '@mui/icons-material/RssFeed';
+// import RssFeedIcon from '@mui/icons-material/RssFeed';
 import RingVolumeIcon from '@mui/icons-material/RingVolume';
-import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
+// import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
 interface NavType {
@@ -16,6 +16,7 @@ interface NavType {
     primaryText: string,
     secondaryText: string,
     color: string,
+    blank?: boolean,
     to: string
 }
 
@@ -39,25 +40,26 @@ const NavList: NavType[] = [
         color: "#93cebe",
         primaryText: "Contact",
         secondaryText: "接触",
-        to: "/contact"
+        blank: true,
+        to: "https://github.com/michioxd/michioxd/blob/main/contact.md"
     },
-    {
-        icon: (<HomeRepairServiceIcon />),
-        color: "#ffe0a6",
-        primaryText: "Tools",
-        secondaryText: "道具",
-        to: "/tools"
-    },
-    {
-        icon: (<RssFeedIcon />),
-        color: "#806988",
-        primaryText: "Blog",
-        secondaryText: "ブログ",
-        to: "/blog"
-    }
+    // {
+    //     icon: (<HomeRepairServiceIcon />),
+    //     color: "#ffe0a6",
+    //     primaryText: "Tools",
+    //     secondaryText: "道具",
+    //     to: "/tools"
+    // },
+    // {
+    //     icon: (<RssFeedIcon />),
+    //     color: "#806988",
+    //     primaryText: "Blog",
+    //     secondaryText: "ブログ",
+    //     to: "/blog"
+    // }
 ]
 
-const NavItem = ({ icon, primaryText, secondaryText, color, to }: NavType) => {
+const NavItem = ({ icon, primaryText, secondaryText, color, to, blank }: NavType) => {
     return (
         <Button sx={{
             ml: 1, display: {
@@ -65,7 +67,7 @@ const NavItem = ({ icon, primaryText, secondaryText, color, to }: NavType) => {
                 sm: 'none',
                 xs: 'none'
             }
-        }} component={LinkRouter} to={to}>
+        }} component={LinkRouter} target={blank ? "_blank" : ""} to={to}>
             <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                 <IconButton sx={{ backgroundColor: color + " !important", color: "#fff" }} disableRipple>
                     {icon}

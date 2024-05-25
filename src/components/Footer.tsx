@@ -82,7 +82,7 @@ export default function Footer() {
                         </Typography>
                         <Typography mb={1} fontSize="10px" variant="body2">aka Mashiro</Typography>
                         <Typography fontSize="12px" variant="body2">
-                            &copy; 2023 michioxd. Built with <Link color="inherit" target="_blank" href="https://vitejs.dev/guide/#getting-started">React + Vite + TypeScript</Link> + <Link title="Open Source license" component={LinkRouter} to="/opensource-license" color="inherit">deps</Link>
+                            &copy; 2024 michioxd. Built with <Link color="inherit" target="_blank" href="https://vitejs.dev/guide/#getting-started">React + Vite + TypeScript</Link> + <Link title="Open Source license" component={LinkRouter} to="/opensource-license" color="inherit">deps</Link>
                         </Typography>
                         <Typography fontSize="10px" variant="body2">
                             This site is available on my <Link color="inherit" target="_blank" href="https://github.com/michioxd/michioxd.github.io">GitHub Repository</Link>.

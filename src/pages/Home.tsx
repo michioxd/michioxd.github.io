@@ -3,8 +3,6 @@ import Title from "../components/Title";
 import cls from "./Home.module.scss";
 import { Img } from "react-image";
 
-import Neko from "./../assets/neko.webp";
-
 import HotelIcon from '@mui/icons-material/Hotel';
 import CodeIcon from '@mui/icons-material/Code';
 import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
@@ -26,7 +24,7 @@ export default function PageHome() {
                             xs: 2
                         }
                     }}>
-                        <Img src={Neko} style={{ width: '100%' }} />
+                        <Img src={"https://www.gravatar.com/avatar/35421891b164c29bab7640be09832acd939a3ea15fccbfb68144befef58d6d82?s=512"} style={{ width: '100%' }} />
                     </Card>
                 </Grid>
                 <Grid item xs={12} md={9}>
@@ -34,10 +32,10 @@ export default function PageHome() {
                         <div className={cls.Background} />
                         <CardContent className={cls.HomeContent}>
                             <Typography variant="h6">hello, my name is Michio (aka Mashiro)</Typography>
-                            <Typography fontSize={12} variant="body2">i made so much <span title="stupid" style={{ cursor: "help" }}>baka</span> things, i do everything i love, programming, design, play game,...</Typography>
+                            <Typography fontSize={12} variant="body2">i made so much <span title="stupid" style={{ cursor: "help" }}>baka</span> things, i do everything i love, programming, design, play game,..., love moeeee things, love nekoooooo!!!</Typography>
                             <br />
                             <Typography fontSize={17} variant="h6">what i can do?</Typography>
-                            <List dense sx={{ width: '100%', }}>
+                            <List dense sx={{ width: '100%', flexDirection: { md: 'row', xs: 'column' }, display: 'flex' }} >
                                 <ListItem>
                                     <ListItemAvatar>
                                         <Avatar sx={{ bgcolor: '#ffc7c7' }}>

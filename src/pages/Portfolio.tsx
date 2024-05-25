@@ -5,14 +5,81 @@ import Title from "../components/Title";
 import MFS_0 from './../assets/portfolio/mfs_0.png';
 import BMP_0 from './../assets/portfolio/bmp_0.png';
 import SOUNDDARK from './../assets/portfolio/sounddark.png';
+import GSVN from "./../assets/portfolio/gamestorevn.com_.png";
+import TinyDRPC from "./../assets/portfolio/tinydrpc.png";
+import tcvn2uni from "./../assets/portfolio/tcvn2uni.png";
 const List = [
+    {
+        image: SOUNDDARK,
+        name: "SoundDark",
+        type: "Extension",
+        description: "A better Dark theme for SoundCloud",
+        tech: [
+            "JavaScript",
+            "Chromium",
+            "Firefox"
+        ],
+        buttons: [
+            {
+                name: "GitHub",
+                url: "https://github.com/michioxd/sounddark"
+            },
+            {
+                name: "MS Store",
+                url: "https://microsoftedge.microsoft.com/addons/detail/sounddark/mdjnpmfeinnmbhanpikmfcbigpnjcplj"
+            },
+            {
+                name: "Firefox Add-ons",
+                url: "https://addons.mozilla.org/en-US/firefox/addon/sounddark/"
+            }
+        ]
+    },
+
+    {
+        image: TinyDRPC,
+        name: "TinyDRPC",
+        type: "Tools",
+        description: "Tiny Discord Rich Presence Client, customize your \"Playing\" status, written in C# using discord-rpc-csharp",
+        tech: [
+            "C#"
+        ],
+        buttons: [
+            {
+                name: "GitHub",
+                url: "https://github.com/michioxd/tinydrpc"
+            },
+            {
+                name: "Download",
+                url: "https://github.com/michioxd/TinyDRPC/releases/latest"
+            }
+        ]
+    },
+    {
+        image: tcvn2uni,
+        name: "tcvn2uni",
+        type: "Tools",
+        description: "Convert your document (Word, Excel, PowerPoint) in TCVN3 to Unicode directly on your browser",
+        tech: [
+            "TypeScript"
+        ],
+        buttons: [
+            {
+                name: "Website",
+                url: "https://michioxd.github.io/tcvn2uni/"
+            },
+            {
+                name: "GitHub",
+                url: "https://github.com/michioxd/tcvn2uni"
+            }
+        ]
+    },
     {
         image: MFS_0,
         name: "Mon Fansub",
         type: "Web",
         tech: [
             "React",
-            "Node.js",
+            "TypeScript",
             "PHP",
             "Fullstack"
         ],
@@ -29,7 +96,7 @@ const List = [
         type: "Web",
         tech: [
             "React",
-            "Node.js",
+            "TypeScript",
             "Frontend"
         ],
         buttons: [
@@ -40,22 +107,18 @@ const List = [
         ]
     },
     {
-        image: SOUNDDARK,
-        name: "SoundDark",
-        type: "Extension",
-        description: "A better Dark theme for SoundCloud",
+        image: GSVN,
+        name: "GameStoreVN",
+        type: "Web",
         tech: [
-            "JavaScript",
-            "Chromium"
+            "React",
+            "TypeScript",
+            "Frontend"
         ],
         buttons: [
             {
-                name: "GitHub",
-                url: "https://github.com/michioxd/sounddark"
-            },
-            {
-                name: "Microsoft Store",
-                url: "https://microsoftedge.microsoft.com/addons/detail/sounddark/mdjnpmfeinnmbhanpikmfcbigpnjcplj"
+                name: "Website",
+                url: "https://gamestorevn.com"
             }
         ]
     },
