@@ -103,6 +103,7 @@ const List = [
         tech: [
             "React",
             "TypeScript",
+            "Node.js",
             "PHP",
             "Fullstack"
         ],
