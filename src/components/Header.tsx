@@ -8,6 +8,7 @@ import CottageOutlinedIcon from '@mui/icons-material/CottageOutlined';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 // import RssFeedIcon from '@mui/icons-material/RssFeed';
 import RingVolumeIcon from '@mui/icons-material/RingVolume';
+import RssFeedIcon from '@mui/icons-material/RssFeed';
 // import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
@@ -42,6 +43,14 @@ const NavList: NavType[] = [
         secondaryText: "接触",
         blank: true,
         to: "https://github.com/michioxd/michioxd/blob/main/contact.md"
+    },
+    {
+        icon: (<RssFeedIcon />),
+        color: "#ffe0a6",
+        primaryText: "Service Status",
+        secondaryText: "サービス状況",
+        blank: true,
+        to: "https://status.michioxd.ch/"
     },
     // {
     //     icon: (<HomeRepairServiceIcon />),
