@@ -1,9 +1,42 @@
 .Footer {
     width: 100%;
-    background-color: #ffc7c7;
-    padding: 1rem;
+    background-color: #ffffff9a;
+    z-index: 99;
+    border-top: 1px solid var(--gray-a4);
+    $pd: 2rem;
+    width: calc(100% - $pd * 2);
+    padding: $pd;
 
-    .Logo {
-        width: 200px;
+    :global(.dark) & {
+        background-color: #1111109a;
+    }
+
+
+    .Inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 1.5rem;
+
+            * {
+                text-align: center;
+            }
+        }
+
+        .Logo {
+            width: 200px;
+        }
+
+        .Content {
+            display: flex;
+            flex-direction: column;
+            gap: 0rem;
+            margin-left: 1rem;
+        }
     }
 }

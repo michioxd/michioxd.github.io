@@ -1,8 +1,45 @@
+.radix-themes {
+    --default-font-family: 'Inter', sans-serif !important;
+    --heading-font-family: 'Manrope', sans-serif !important;
+    min-height: unset !important;
+    max-height: unset !important;
+}
+
 body {
-    background-color: #ffabde;
-    background-image: url('./assets/background.webp');
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    margin: 0;
+    background: #111110;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, .7);
+    border-radius: 10px;
+    background-clip: content-box;
+    border: 4px solid transparent;
+    transition: .2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-clip: content-box;
+    border: 3px solid transparent
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: rgba(128, 128, 128, .4);
+    background-clip: content-box
+}
+
+.PrettyTitle {
+    --text-color: #cca4b5;
+    background: radial-gradient(circle 300px at 30% -180%, var(--text-color) 0%, #ffffff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 4px rgba(255, 255, 255, .1), 0 0 14px rgba(130, 168, 236, .2);
 }

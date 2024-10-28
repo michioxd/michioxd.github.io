@@ -1,159 +1,64 @@
-import { AppBar, Avatar, Box, Button, Container, Drawer, IconButton, List, ListItemAvatar, ListItemButton, ListItemText, Typography } from "@mui/material";
-import { Img } from "react-image";
-import Logo from "./../assets/full-ver.svg";
-import LogoFull from "./../assets/full.svg";
-import { Link as LinkRouter } from "react-router-dom";
+import { DropdownMenu, IconButton } from "@radix-ui/themes";
+import clsx from "clsx";
+import cls from "./Header.module.scss";
+import MainIcon from "./icons/MainIcon";
+import { Link } from "react-scroll";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
-import CottageOutlinedIcon from '@mui/icons-material/CottageOutlined';
-import AccountTreeIcon from '@mui/icons-material/AccountTree';
-// import RssFeedIcon from '@mui/icons-material/RssFeed';
-import RingVolumeIcon from '@mui/icons-material/RingVolume';
-import RssFeedIcon from '@mui/icons-material/RssFeed';
-// import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
-import MenuIcon from '@mui/icons-material/Menu';
-import { useState } from "react";
-interface NavType {
-    icon: JSX.Element,
-    primaryText: string,
-    secondaryText: string,
-    color: string,
-    blank?: boolean,
-    to: string
-}
-
-const NavList: NavType[] = [
+const routes = [
     {
-        icon: (<CottageOutlinedIcon />),
-        color: "#f075ab",
-        primaryText: "Home",
-        secondaryText: "家庭",
-        to: "/"
+        name: "home",
+        id: "home"
     },
     {
-        icon: (<AccountTreeIcon />),
-        color: "#7068bd",
-        primaryText: "Portfolio",
-        secondaryText: "ポートフォリオ",
-        to: "/portfolio"
+        name: "skills",
+        id: "my-skills"
     },
     {
-        icon: (<RingVolumeIcon />),
-        color: "#93cebe",
-        primaryText: "Contact",
-        secondaryText: "接触",
-        blank: true,
-        to: "https://github.com/michioxd/michioxd/blob/main/contact.md"
+        name: 'projects',
+        id: 'my-projects'
     },
     {
-        icon: (<RssFeedIcon />),
-        color: "#ffe0a6",
-        primaryText: "Service Status",
-        secondaryText: "サービス状況",
-        blank: true,
-        to: "https://status.michioxd.ch/"
+        name: 'about',
+        id: 'about-me'
     },
-    // {
-    //     icon: (<HomeRepairServiceIcon />),
-    //     color: "#ffe0a6",
-    //     primaryText: "Tools",
-    //     secondaryText: "道具",
-    //     to: "/tools"
-    // },
-    // {
-    //     icon: (<RssFeedIcon />),
-    //     color: "#806988",
-    //     primaryText: "Blog",
-    //     secondaryText: "ブログ",
-    //     to: "/blog"
-    // }
+    {
+        name: 'contact',
+        id: 'contact-me'
+    }
 ]
 
-const NavItem = ({ icon, primaryText, secondaryText, color, to, blank }: NavType) => {
-    return (
-        <Button sx={{
-            ml: 1, display: {
-                md: 'inherit',
-                sm: 'none',
-                xs: 'none'
-            }
-        }} component={LinkRouter} target={blank ? "_blank" : ""} to={to}>
-            <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                <IconButton sx={{ backgroundColor: color + " !important", color: "#fff" }} disableRipple>
-                    {icon}
-                </IconButton>
-                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', ml: 1 }}>
-                    <Typography sx={{ fontSize: '14px', textTransform: 'initial', textShadow: '0px 0px 2px' }}>{primaryText}</Typography>
-                    <Typography variant="body2" sx={{ fontSize: '9px', textTransform: 'initial', textShadow: '0px 0px 2px' }}>{secondaryText}</Typography>
-                </Box>
-            </Box>
-        </Button>
-    )
-}
-
 export default function Header() {
-    const [openDrawer, setOpenDrawer] = useState(false);
     return (
-        <>
-            <Drawer
-                anchor={'left'}
-                open={openDrawer}
-                onClose={() => setOpenDrawer(false)}
-            >
-                <Box
-                    role="presentation"
-                    onClick={() => setOpenDrawer(false)}
-                    onKeyDown={() => setOpenDrawer(false)}
-                    sx={{ width: 300, display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-                >
-                    <Img style={{ marginTop: '1rem' }} src={LogoFull} width={'200px'} />
-                    <List dense sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-                        {NavList.map((d, i) => (
-                            <ListItemButton component={LinkRouter} to={d.to} key={i}>
-                                <ListItemAvatar>
-                                    <Avatar sx={{ bgcolor: d.color }}>
-                                        {d.icon}
-                                    </Avatar>
-                                </ListItemAvatar>
-                                <ListItemText secondaryTypographyProps={{ fontSize: 10 }} primary={d.primaryText} secondary={d.secondaryText} />
-                            </ListItemButton>
+        <div className={cls.Header}>
+            <div className={cls.Inner}>
+                <Link to="/">
+                    <IconButton className={cls.HomeBtn} size="3" variant="ghost">
+                        <MainIcon fontSize={25} />
+                    </IconButton>
+                </Link>
+                <div className={cls.Nav}>
+                    {routes.map((route, index) => (
+                        <Link key={index} activeClass="rt-variant-surface" className={clsx("rt-reset rt-BaseButton rt-r-size-2 rt-variant-ghost rt-Button", cls.NavBtn)} to={route.id} spy={true} smooth={true} duration={500} >
+                            {route.name}
+                        </Link>
+                    ))}
+                </div>
+                <DropdownMenu.Root>
+                    <DropdownMenu.Trigger>
+                        <IconButton className={cls.MbMenu} variant="surface">
+                            <HamburgerMenuIcon />
+                        </IconButton>
+                    </DropdownMenu.Trigger>
+                    <DropdownMenu.Content>
+                        {routes.map((route, index) => (
+                            <Link key={index} to={route.id} spy={true} smooth={true} duration={500} >
+                                <DropdownMenu.Item>{route.name}</DropdownMenu.Item>
+                            </Link>
                         ))}
-                    </List>
-                </Box>
-            </Drawer>
-            <AppBar sx={{ boxShadow: '' }} color="inherit" position="fixed">
-                <Container>
-                    <Box sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between'
-                    }}>
-                        <LinkRouter style={{ margin: '5px' }} to="/">
-                            <Img src={Logo} height={'50px'} />
-                        </LinkRouter>
-                        <Box sx={{
-                            display: 'flex',
-                            alignItems: 'center'
-                        }}>
-                            {NavList.map((d, i) => (
-                                <NavItem
-                                    key={i}
-                                    {...d}
-                                />
-                            ))}
-                            <IconButton sx={{
-                                display: {
-                                    md: 'none',
-                                    sm: 'inherit',
-                                    xs: 'inherit'
-                                }
-                            }}
-                                onClick={() => setOpenDrawer(true)}>
-                                <MenuIcon />
-                            </IconButton>
-                        </Box>
-                    </Box>
-                </Container>
-            </AppBar>
-        </>
+                    </DropdownMenu.Content>
+                </DropdownMenu.Root>
+            </div>
+        </div>
     )
 }

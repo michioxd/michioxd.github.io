@@ -1,17 +1,18 @@
-import { Container } from "@mui/material"
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import HomeRouter from "./router"
+import cls from "./App.module.scss";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import PageHome from "./pages/Home";
 
 function App() {
+
     return (
-        <>
+        <div className={cls.Layout}>
             <Header />
-            <Container sx={{ mt: "calc(66px + 1rem)", mb: 2 }}>
-                <HomeRouter />
-            </Container>
+            <div className={cls.Container}>
+                <PageHome />
+            </div>
             <Footer />
-        </>
+        </div>
     )
 }
 
