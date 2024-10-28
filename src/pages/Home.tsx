@@ -3,7 +3,7 @@ import cls from "./Home.module.scss";
 import Hoshino from "./../assets/images/hoshino.webp";
 import { Element } from 'react-scroll'
 import { AspectRatio, Badge, Button, Card, Grid, Heading, IconButton, Link, Text, Tooltip } from "@radix-ui/themes";
-import { PiCodeDuotone, PiDiscordLogoDuotone, PiEnvelopeDuotone, PiGithubLogoDuotone, PiHeartDuotone, PiInfoDuotone, PiMagicWandDuotone, PiTelegramLogoDuotone, PiTwitterLogoDuotone } from "react-icons/pi";
+import { PiCodeDuotone, PiDiscordLogoDuotone, PiEnvelopeDuotone, PiGithubLogoDuotone, PiHeartDuotone, PiInfoDuotone, PiMagicWandDuotone, PiPhoneCallDuotone, PiTelegramLogoDuotone, PiTwitterLogoDuotone } from "react-icons/pi";
 import type { BaseButtonProps } from "@radix-ui/themes/src/components/base-button.js";
 
 import tsIcon from "./../assets/icons/ts.svg";
@@ -412,7 +412,7 @@ export default function PageHome() {
             <Element name="contact-me" className={cls.Section}>
                 <div className={cls.Heading}>
                     <IconButton className={cls.Icons} size="4" variant="surface">
-                        <PiInfoDuotone size={25} />
+                        <PiPhoneCallDuotone size={25} />
                     </IconButton>
                     <div className={cls.Inf}>
                         <Heading style={{ "--text-color": "#e2d1d4" } as React.CSSProperties} className={"PrettyTitle"} size="4">
