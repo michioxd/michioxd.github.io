@@ -4,6 +4,7 @@ import cls from "./Header.module.scss";
 import MainIcon from "./icons/MainIcon";
 import { Link } from "react-scroll";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { useEffect, useState } from "react";
 
 const routes = [
     {
@@ -29,10 +30,27 @@ const routes = [
 ]
 
 export default function Header() {
+    const [showBg, setShowBg] = useState(false);
+
+    useEffect(() => {
+        function ScrollEvent() {
+            if (window.scrollY >= 40) {
+                setShowBg(true);
+            } else {
+                setShowBg(false);
+            }
+        }
+        window.addEventListener("scroll", ScrollEvent);
+
+        return () => {
+            window.removeEventListener("scroll", ScrollEvent);
+        }
+    }, []);
+
     return (
-        <div className={cls.Header}>
+        <div className={clsx(cls.Header, showBg && cls.bg)}>
             <div className={cls.Inner}>
-                <Link to="/">
+                <Link to="home" duration={500} smooth>
                     <IconButton className={cls.HomeBtn} size="3" variant="ghost">
                         <MainIcon fontSize={25} />
                     </IconButton>

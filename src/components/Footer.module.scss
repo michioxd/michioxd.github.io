@@ -6,11 +6,12 @@
     $pd: 2rem;
     width: calc(100% - $pd * 2);
     padding: $pd;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
 
     :global(.dark) & {
         background-color: #1111109a;
     }
-
 
     .Inner {
         max-width: 1200px;

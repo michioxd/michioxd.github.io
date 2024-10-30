@@ -349,7 +349,7 @@ export default function PageHome() {
                     md: "3",
                     sm: "2",
                     xs: "1"
-                }} width="auto">
+                }} width="auto" gapX="3" gapY="3">
                     {List.map((project, index) => (
                         <Card variant="surface" key={index} className={cls.Projects}>
                             <AspectRatio ratio={16 / 9}>

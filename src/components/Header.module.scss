@@ -2,20 +2,23 @@
     $pd: 0.8rem;
     width: calc(100% - $pd * 2);
     padding: $pd;
-    background-color: var(--color-background);
-    box-shadow: 0 1px var(--gray-a4);
     display: flex;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
     position: fixed;
     top: 0;
-    background-color: #ffffff9a;
     z-index: 99;
+    transition: 0.3s;
 
-    :global(.dark) & {
-        background-color: #1111109a;
+    &.bg {
+        background-color: #ffffff9a;
+        box-shadow: 0 1px var(--gray-a4);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+
+        :global(.dark) & {
+            background-color: #1111109a;
+        }
     }
 
     .Inner {
