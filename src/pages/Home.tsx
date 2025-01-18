@@ -24,6 +24,7 @@ import TinyDRPC from "./../assets/projects/tinydrpc.webp";
 import tcvn2uni from "./../assets/projects/tcvn2uni.webp";
 import nyanspace from "./../assets/projects/nyanspace.webp";
 import banner from "./../assets/images/banner.webp";
+import luckit from "./../assets/projects/luckit.webp";
 
 const ListSocial = [
     {
@@ -70,6 +71,26 @@ const List = [
             {
                 name: "Website",
                 url: "https://www.monfansubvn.com"
+            }
+        ]
+    },
+    {
+        image: luckit,
+        name: "luckit",
+        type: "Extension",
+        description: "An extension for Chromium-based browser, unofficial Locket client for you to update your friends moment directly on your favorite browser",
+        tech: [
+            "TypeScript",
+            "React"
+        ],
+        buttons: [
+            {
+                name: "GitHub",
+                url: "https://github.com/michioxd/luckit"
+            },
+            {
+                name: "Chrome",
+                url: 'https://chromewebstore.google.com/detail/luckit/gkpedjnafgjmkjlcfcgcjonblhjiifmo'
             }
         ]
     },
