@@ -64,7 +64,6 @@ const List = [
             "React",
             "TypeScript",
             "Node.js",
-            "PHP",
             "Fullstack"
         ],
         buttons: [
