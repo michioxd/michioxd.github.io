@@ -63,8 +63,7 @@ const List = [
         tech: [
             "React",
             "TypeScript",
-            "Node.js",
-            "Fullstack"
+            "Node.js"
         ],
         buttons: [
             {
@@ -186,8 +185,7 @@ const List = [
         type: "Web",
         tech: [
             "React",
-            "TypeScript",
-            "Frontend"
+            "TypeScript"
         ],
         buttons: [
             {
@@ -202,8 +200,7 @@ const List = [
         type: "Web",
         tech: [
             "React",
-            "TypeScript",
-            "Frontend"
+            "TypeScript"
         ],
         buttons: [
             {

@@ -61,6 +61,9 @@ export default function Header() {
                             {route.name}
                         </Link>
                     ))}
+                    <a className={clsx("rt-reset rt-BaseButton rt-r-size-2 rt-variant-ghost rt-Button", cls.NavBtn)} href={"https://blog.michioxd.ch"} target="_blank">
+                        blog
+                    </a>
                 </div>
                 <DropdownMenu.Root>
                     <DropdownMenu.Trigger>
