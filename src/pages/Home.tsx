@@ -16,7 +16,6 @@ import goIcon from "./../assets/icons/go.svg";
 import cppIcon from "./../assets/icons/cpp.svg";
 import psIcon from "./../assets/icons/ps.svg";
 
-import MFS_0 from './../assets/projects/mfs_0.webp';
 import BMP_0 from './../assets/projects/bmp_0.webp';
 import SOUNDDARK from './../assets/projects/sounddark.webp';
 import GSVN from "./../assets/projects/gamestorevn.com_.webp";
@@ -55,23 +54,6 @@ const ListSocial = [
 ];
 
 const List = [
-    {
-        image: MFS_0,
-        name: "Mon Fansub",
-        description: "I'm currently working on this project",
-        type: "PWA",
-        tech: [
-            "React",
-            "TypeScript",
-            "Node.js"
-        ],
-        buttons: [
-            {
-                name: "Website",
-                url: "https://www.monfansubvn.com"
-            }
-        ]
-    },
     {
         image: luckit,
         name: "luckit",
