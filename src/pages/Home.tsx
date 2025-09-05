@@ -4,7 +4,7 @@ import Hoshino from "./../assets/images/hoshino.webp";
 import { Element } from 'react-scroll'
 import { AspectRatio, Badge, Button, Card, Grid, Heading, IconButton, Link, Text, Tooltip } from "@radix-ui/themes";
 import { PiCodeDuotone, PiDiscordLogoDuotone, PiEnvelopeDuotone, PiGithubLogoDuotone, PiHeartDuotone, PiInfoDuotone, PiMagicWandDuotone, PiPhoneCallDuotone, PiTelegramLogoDuotone, PiTwitterLogoDuotone } from "react-icons/pi";
-import type { BaseButtonProps } from "@radix-ui/themes/src/components/base-button.js";
+import type { accentColors } from "@radix-ui/themes/src/props/color.prop.ts";
 
 import tsIcon from "./../assets/icons/ts.svg";
 import jsIcon from "./../assets/icons/js.svg";
@@ -24,6 +24,7 @@ import tcvn2uni from "./../assets/projects/tcvn2uni.webp";
 import nyanspace from "./../assets/projects/nyanspace.webp";
 import banner from "./../assets/images/banner.webp";
 import luckit from "./../assets/projects/luckit.webp";
+import MFS from "./../assets/projects/mfs.webp";
 
 const ListSocial = [
     {
@@ -162,6 +163,27 @@ const List = [
         ]
     },
     {
+        image: MFS,
+        name: "Mon Fansub",
+        description: "Mon Fansub Team Official Website",
+        type: "Web",
+        tech: [
+            "React",
+            "TypeScript",
+            "Node.js"
+        ],
+        buttons: [
+            {
+                name: "Website",
+                url: "https://www.monfansubvn.com"
+            },
+            {
+                name: "Fanpage",
+                url: "https://www.facebook.com/profile.php?id=61573406124701"
+            }
+        ]
+    },
+    {
         image: BMP_0,
         name: "RobuxZone",
         type: "Web",
@@ -197,7 +219,7 @@ const skills: {
     name: string,
     icon: string,
     description: string,
-    color: BaseButtonProps["color"],
+    color: typeof accentColors[number],
     textColor: string
 }[] = [
         {
