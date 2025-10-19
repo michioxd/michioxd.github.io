@@ -2,6 +2,8 @@ import {
     PiDiscordLogoDuotone,
     PiEnvelopeDuotone,
     PiGithubLogoDuotone,
+    PiNewspaperDuotone,
+    PiPowerDuotone,
     PiTelegramLogoDuotone,
     PiTwitterLogoDuotone,
 } from 'react-icons/pi';
@@ -39,4 +41,19 @@ const ListContact = [
     },
 ];
 
-export { ListContact };
+const ListOther = [
+    {
+        name: 'blog',
+        user: 'visit my blog (not updated often)',
+        icon: <PiNewspaperDuotone size={25} />,
+        url: 'https://blog.michioxd.ch',
+    },
+    {
+        name: 'services status',
+        user: 'check if my services are up or down',
+        icon: <PiPowerDuotone size={25} />,
+        url: 'https://status.michioxd.ch',
+    },
+];
+
+export { ListContact, ListOther };

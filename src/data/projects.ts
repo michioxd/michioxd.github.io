@@ -6,12 +6,15 @@ import nyanspace from "./../assets/projects/nyanspace.webp";
 import luckit from "./../assets/projects/luckit.webp";
 import MFS from "./../assets/projects/mfs.webp";
 import nyaadenwa from "./../assets/projects/nyaadenwa.png";
+import bakafiles from "./../assets/projects/bakafiles.png";
+import materialIconPicker from './../assets/projects/material-icon-picker.png';
 
 const Projects = [
     {
         image: nyaadenwa,
-        name: "nyaadenwa (WIP)",
+        name: "nyaadenwa",
         type: "Tools",
+        wip: true,
         description: "Manage your Android Phone directly from your browser",
         tech: [
             "TypeScript",
@@ -71,6 +74,7 @@ const Projects = [
         image: nyanspace,
         name: "nyanspace",
         type: "Android",
+        wip: true,
         description: "An Android app to manage your Linux server via SSH. There is no need to install anything (e.g., endpoint api, etc.) on your server.",
         tech: [
             "TypeScript",
@@ -84,6 +88,25 @@ const Projects = [
             {
                 name: "Download",
                 url: "https://github.com/michioxd/nyanspace/releases/latest"
+            }
+        ]
+    },
+    {
+        image: materialIconPicker,
+        name: "Material Icon Picker for MUI",
+        type: "Extension",
+        description: "A Visual Studio Code extension that helps you pick Material icons for your React MUI-based projects.",
+        tech: [
+            "TypeScript"
+        ],
+        buttons: [
+            {
+                name: "GitHub",
+                url: "https://github.com/michioxd/vscode-mui-material-icon-picker"
+            },
+            {
+                name: "Marketplace",
+                url: "https://marketplace.visualstudio.com/items?itemName=michioxd.vscode-mui-material-icon-picker"
             }
         ]
     },
@@ -167,6 +190,21 @@ const Projects = [
             }
         ]
     },
+    {
+        image: bakafiles,
+        name: "bakafiles",
+        type: "Web",
+        description: "A simple and \"broken\" file manager written in PHP",
+        tech: [
+            "PHP"
+        ],
+        buttons: [
+            {
+                name: "GitHub",
+                url: "https://github.com/michioxd/bakafiles"
+            }
+        ]
+    }
 ];
 
 export default Projects;

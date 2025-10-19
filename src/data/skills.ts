@@ -1,5 +1,3 @@
-import type { accentColors } from "@radix-ui/themes/src/props/color.prop.ts";
-
 import tsIcon from "./../assets/icons/ts.svg";
 import jsIcon from "./../assets/icons/js.svg";
 import nodeJSIcon from "./../assets/icons/node-js.svg";
@@ -9,12 +7,15 @@ import csIcon from "./../assets/icons/cs.svg";
 import goIcon from "./../assets/icons/go.svg";
 import cppIcon from "./../assets/icons/cpp.svg";
 import psIcon from "./../assets/icons/ps.svg";
+import mongoIcon from "./../assets/icons/mongo.svg";
+import tailwindIcon from "./../assets/icons/tailwind.svg";
+import type { radixColors } from "../types/colors";
 
 const skills: {
     name: string,
     icon: string,
     description: string,
-    color: typeof accentColors[number],
+    color: radixColors,
     textColor: string
 }[] = [
         {
@@ -55,7 +56,7 @@ const skills: {
         {
             name: "C++",
             icon: cppIcon,
-            description: "\"stupid student\" award?",
+            description: "ultra fassstttt",
             color: "blue",
             textColor: "#649ad2"
         },
@@ -79,6 +80,20 @@ const skills: {
             description: "i love to design my waifu :3",
             color: "sky",
             textColor: "#31a8ff"
+        },
+        {
+            name: "MongoDB",
+            icon: mongoIcon,
+            description: "loved nosql dbms",
+            color: "grass",
+            textColor: "#47a248"
+        },
+        {
+            name: "TailwindCSS",
+            icon: tailwindIcon,
+            description: "css made easy why not?",
+            color: "blue",
+            textColor: "#06b6d4"
         }
     ];
 

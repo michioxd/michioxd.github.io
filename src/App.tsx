@@ -1,12 +1,12 @@
 import { Avatar, Badge, Button, Card, Flex, Grid, Heading, HoverCard, IconButton, Link, Text } from '@radix-ui/themes';
-import { PiCodeDuotone, PiInfoDuotone, PiMagicWandDuotone, PiPhoneCallDuotone } from 'react-icons/pi';
+import { PiCodeDuotone, PiInfoDuotone, PiLinkDuotone, PiMagicWandDuotone, PiPhoneCallDuotone } from 'react-icons/pi';
 import Hero from './components/hero';
 import skills from './data/skills';
 import Footer from './components/Footer';
 import Projects from './data/projects';
 import cls from './App.module.scss';
 import { cn } from './utils/class';
-import { ListContact } from './data/contact';
+import { ListContact, ListOther } from './data/contact';
 import HeaderSection from './components/Header';
 
 function App() {
@@ -150,6 +150,11 @@ function App() {
                                                                 >
                                                                     {project.name}{' '}
                                                                     <Badge size="1">{project.type}</Badge>
+                                                                    {project.wip && (
+                                                                        <Badge size="1" color="yellow">
+                                                                            WIP
+                                                                        </Badge>
+                                                                    )}
                                                                 </Heading>
                                                             </HoverCard.Trigger>
                                                             <HoverCard.Content>
@@ -162,7 +167,7 @@ function App() {
                                                                 </a>
                                                             </HoverCard.Content>
                                                         </HoverCard.Root>
-                                                        <Text size="1" color="gray">
+                                                        <Text size="1" color="gray" className="!text-[10px]">
                                                             {project.description}
                                                         </Text>
                                                         <div className="flex flex-wrap gap-1">
@@ -232,6 +237,42 @@ function App() {
                                                 neko@michioxd.ch
                                             </Link>
                                         </Text>
+                                    </div>
+                                </Card>
+                            </div>
+                            <div>
+                                <Card size="2">
+                                    <HeaderSection
+                                        icons={<PiLinkDuotone size={24} />}
+                                        title="related links"
+                                        subtitle="no idea"
+                                    />
+                                    <div className="mt-2 flex-col flex gap-2">
+                                        {ListOther.map((contact, index) => (
+                                            <Link key={index} href={contact.url} target="_blank">
+                                                <Card className="!flex flex-row gap-2">
+                                                    <IconButton size="3" variant="surface">
+                                                        {contact.icon}
+                                                    </IconButton>
+                                                    <div className={'flex flex-col'}>
+                                                        <Heading
+                                                            style={
+                                                                {
+                                                                    '--text-color': '#e2d1d4',
+                                                                } as React.CSSProperties
+                                                            }
+                                                            className={'PrettyTitle'}
+                                                            size="3"
+                                                        >
+                                                            {contact.name}
+                                                        </Heading>
+                                                        <Text size="1" className="!text-[10px]" color="gray">
+                                                            {contact.user}
+                                                        </Text>
+                                                    </div>
+                                                </Card>
+                                            </Link>
+                                        ))}
                                     </div>
                                 </Card>
                             </div>
