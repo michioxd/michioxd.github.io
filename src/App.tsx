@@ -1,13 +1,13 @@
 import { Avatar, Badge, Button, Card, Flex, Grid, Heading, HoverCard, IconButton, Link, Text } from '@radix-ui/themes';
 import { PiCodeDuotone, PiInfoDuotone, PiMagicWandDuotone, PiPhoneCallDuotone } from 'react-icons/pi';
 import Hero from './components/hero';
-import HeaderSection from './components/header';
 import skills from './data/skills';
 import Footer from './components/Footer';
 import Projects from './data/projects';
 import cls from './App.module.scss';
 import { cn } from './utils/class';
 import { ListContact } from './data/contact';
+import HeaderSection from './components/Header';
 
 function App() {
     return (
