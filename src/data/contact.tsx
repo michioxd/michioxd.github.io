@@ -1,4 +1,5 @@
 import {
+    PiBookDuotone,
     PiDiscordLogoDuotone,
     PiEnvelopeDuotone,
     PiGithubLogoDuotone,
@@ -60,6 +61,12 @@ const ListOther: {
     url: string;
     color?: radixColors;
 }[] = [
+    {
+        name: 'guest book',
+        sub: 'leave a message for me',
+        icon: <PiBookDuotone size={25} />,
+        url: 'https://michioxd.atabook.org/',
+    },
     {
         name: 'blog',
         sub: 'visit my blog (not updated often)',
