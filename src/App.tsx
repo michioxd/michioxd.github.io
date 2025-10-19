@@ -19,7 +19,7 @@ const Projects = () => {
                         title="my projects"
                         subtitle="heh...? too bad..."
                     />
-                    <div className="mt-2 overflow-auto md:max-h-[613px]">
+                    <div className="mt-2 overflow-auto md:max-h-[685px]">
                         <div className="flex flex-wrap flex-col gap-2">
                             {AllProjects.map((project, index) => (
                                 <Card variant="surface" key={index}>
