@@ -40,7 +40,7 @@ export default function Hero() {
             <div className={cn(cls.heroReflect)}>
                 <div className={cn(cls.content)}>
                     <h2 className={cn(cls.main, 'PrettyTitle text-2xl absolute m-2 ml-4 z-10')}>
-                        <span className={cn(cls.t1, 'text-lg')}>hi there! this is</span>
+                        <span className={cn(cls.t1, 'text-lg')}>hi there! i'm</span>
                         &nbsp;michioxd&nbsp;
                         <span className={cn(cls.t2, 'text-sm')}>{'ฅ^>⩊<^ฅ ✩₊˚.⋆☾⋆⁺₊✧'}</span>
                     </h2>
