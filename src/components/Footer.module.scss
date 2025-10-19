@@ -4,7 +4,7 @@
     z-index: 99;
     border-top: 1px solid var(--gray-a4);
     $pd: 2rem;
-    width: calc(100% - $pd * 2);
+    width: 100%;
     padding: $pd;
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
