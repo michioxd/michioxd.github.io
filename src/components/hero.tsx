@@ -1,5 +1,5 @@
 import { cn } from '../utils/class';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import cls from './hero.module.scss';
 import bg0 from '../assets/bg/0.png';
 import bg1 from '../assets/bg/1.png';
@@ -59,6 +59,7 @@ const bgs: {
 
 export default function Hero() {
     const { setColor } = useTheme();
+    const cooldown = useRef<number | null>(null);
     const [indexBg, setIndexBg] = useState<number>(() => {
         const turn = localStorage.getItem('bg-turn');
         return turn ? parseInt(turn, 10) : 0;
@@ -80,6 +81,10 @@ export default function Hero() {
     }, [indexBg, setColor]);
 
     const changeBg = (next: boolean) => {
+        if (cooldown.current) return;
+        cooldown.current = setTimeout(() => {
+            cooldown.current = null;
+        }, 300);
         const newIndex = next ? (indexBg + 1) % bgs.length : (indexBg - 1 + bgs.length) % bgs.length;
         localStorage.setItem('bg-turn', newIndex.toString());
         setIndexBg(newIndex);
