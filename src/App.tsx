@@ -146,7 +146,14 @@ function App() {
                                                 title="🇻🇳Vietnam (Việt Nam)"
                                                 content="Vietnam is a Southeast Asian nation celebrated for its vibrant culture, long history, stunning landscapes, and remarkable transformation from a war-torn past to one of Asia's fastest-growing economies."
                                             />
-                                            . i love kawaii thing, specially{' '}
+                                            . i love{' '}
+                                            <Instructions
+                                                link="https://en.wiktionary.org/wiki/Kawaii"
+                                                name="kawaii"
+                                                title="Kawaii (可愛い)"
+                                                content="Kawaii (可愛い) is a Japanese term meaning “cute” or “adorable,” representing a cultural aesthetic that celebrates innocence, softness, and charm across fashion, art, and pop culture."
+                                            />{' '}
+                                            thing, specially{' '}
                                             <Instructions
                                                 link="https://en.wiktionary.org/wiki/Catgirl"
                                                 name="nekomimi"
