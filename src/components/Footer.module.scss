@@ -1,6 +1,5 @@
 .Footer {
     width: 100%;
-    background-color: #ffffff9a;
     z-index: 99;
     border-top: 1px solid var(--gray-a4);
     $pd: 2rem;
@@ -8,10 +7,7 @@
     padding: $pd;
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
-
-    :global(.dark) & {
-        background-color: #1111109a;
-    }
+    background-color: var(--card-background-color);
 
     .Inner {
         max-width: 1200px;

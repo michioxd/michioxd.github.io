@@ -8,6 +8,7 @@ import cls from './App.module.scss';
 import { cn } from './utils/class';
 import { ListContact, ListOther } from './data/contact';
 import HeaderSection from './components/Header';
+import Instructions from './components/instructions';
 
 const Projects = () => {
     return (
@@ -120,7 +121,7 @@ function App() {
                                     <div className="mt-2 flex flex-col gap-2">
                                         <div className="flex items-center justify-center flex-1 my-2">
                                             <Avatar
-                                                src="https://www.gravatar.com/avatar/35421891b164c29bab7640be09832acd939a3ea15fccbfb68144befef58d6d82?s=512"
+                                                src="https://www.gravatar.com/avatar/35421891b164c29bab7640be09832acd939a3ea15fccbfb68144befef58d6d82?s=1024"
                                                 fallback="neko"
                                                 size="9"
                                             />
@@ -129,19 +130,66 @@ function App() {
                                             hello! xin chào! こんにちは!
                                         </Heading>
                                         <Text size="1" color="gray" className="!leading-normal">
-                                            i'm michioxd, from Vietnam, a fullstack developer. i love kawaii thing,
-                                            specially nekooo and oji-san (
+                                            i'm{' '}
                                             <Link
-                                                href="https://bluearchive.fandom.com/wiki/Takanashi_Hoshino"
+                                                href="https://github.com/michioxd"
+                                                className="!underline"
                                                 target="_blank"
                                                 color="gray"
                                             >
-                                                hoshino
-                                            </Link>{' '}
-                                            you known lmao). i'm not good at anything, but i'm trying to be better. i
-                                            love to make something new, something cool, something that can help people.
-                                            i'm trying become princess before gta 6 heh... no idea btw{' '}
-                                            {'ฅ^>⩊<^ฅ ✩₊˚.⋆☾⋆⁺₊✧'}
+                                                michioxd
+                                            </Link>
+                                            , from{' '}
+                                            <Instructions
+                                                link="https://en.wikipedia.org/wiki/Vietnam"
+                                                name="Vietnam🇻🇳"
+                                                title="🇻🇳Vietnam (Việt Nam)"
+                                                content="Vietnam is a Southeast Asian nation celebrated for its vibrant culture, long history, stunning landscapes, and remarkable transformation from a war-torn past to one of Asia's fastest-growing economies."
+                                            />
+                                            . i love kawaii thing, specially{' '}
+                                            <Instructions
+                                                link="https://en.wiktionary.org/wiki/Catgirl"
+                                                name="nekomimi"
+                                                title="Nekomimi (猫耳)"
+                                                content="Nekomimi (猫耳) means “cat ears” in Japanese, referring to characters—usually human—with cat-like ears and behaviors, blending feline charm with human appeal in anime and pop culture."
+                                            />{' '}
+                                            and oji-san (
+                                            <Instructions
+                                                link="https://bluearchive.fandom.com/wiki/Takanashi_Hoshino"
+                                                name="hoshino"
+                                                title="Takanashi Hoshino (Blue Archive)"
+                                                content="Takanashi Hoshino is a character from Blue Archive, known for her sleepy demeanor, loyalty as an older-sister figure, and role as the laid-back yet dependable deputy of the Abydos High School Countermeasures Committee."
+                                            />{' '}
+                                            you known lmao), love{' '}
+                                            <Instructions
+                                                link="https://en.wikipedia.org/wiki/Programmer"
+                                                name="programming"
+                                                title="Programmer"
+                                                content="A programmer is a person who writes and maintains computer code, turning ideas and logic into functioning software, systems, or applications."
+                                            />{' '}
+                                            , love{' '}
+                                            <Instructions
+                                                link="https://en.wikipedia.org/wiki/Rhythm_game"
+                                                name="rhythm game"
+                                                title="Rhythm Game"
+                                                content="A rhythm game is a music-based video game where players match inputs to the beat, melody, or rhythm of a song, testing timing, reflexes, and sense of music."
+                                            />{' '}
+                                            . i'm not good at anything, but i'm trying to be better. i love to make
+                                            something new, cool and something that can help people. i'm trying become{' '}
+                                            <Instructions
+                                                link="https://en.wikipedia.org/wiki/Lolita_fashion"
+                                                name="princess"
+                                                title="Lolita Fashion"
+                                                content="Lolita fashion is a Japanese street style inspired by Victorian and Rococo clothing, featuring elaborate dresses, lace, and elegance to express cuteness, modesty, and individuality."
+                                            />{' '}
+                                            before{' '}
+                                            <Instructions
+                                                link="https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI"
+                                                name="gta 6"
+                                                title="GTA VI (Grand Theft Auto VI)"
+                                                content="GTA VI (Grand Theft Auto VI) is an upcoming open-world action-adventure game by Rockstar Games®, set in a modernized Vice City, promising expansive storytelling, realism, and next-generation graphics."
+                                            />{' '}
+                                            heh... no idea btw {'ฅ^>⩊<^ฅ ✩₊˚.⋆☾⋆⁺₊✧'}
                                         </Text>
                                     </div>
                                 </Card>
@@ -220,15 +268,7 @@ function App() {
                                                         {contact.icon}
                                                     </IconButton>
                                                     <div className={'flex flex-col'}>
-                                                        <Heading
-                                                            style={
-                                                                {
-                                                                    '--text-color': '#e2d1d4',
-                                                                } as React.CSSProperties
-                                                            }
-                                                            className={'PrettyTitle'}
-                                                            size="3"
-                                                        >
+                                                        <Heading className={'PrettyTitle'} size="3">
                                                             {contact.name}
                                                         </Heading>
                                                         <Text size="1" className="!text-[10px]" color="gray">
@@ -264,15 +304,7 @@ function App() {
                                                         {contact.icon}
                                                     </IconButton>
                                                     <div className={'flex flex-col'}>
-                                                        <Heading
-                                                            style={
-                                                                {
-                                                                    '--text-color': '#e2d1d4',
-                                                                } as React.CSSProperties
-                                                            }
-                                                            className={'PrettyTitle'}
-                                                            size="3"
-                                                        >
+                                                        <Heading className={'PrettyTitle'} size="3">
                                                             {contact.name}
                                                         </Heading>
                                                         <Text size="1" className="!text-[10px]" color="gray">

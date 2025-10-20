@@ -58,9 +58,9 @@
 
         .content {
             .textButReflect {
-                transform: scaleY(-1) perspective(300px) rotate3d(-1, 0, 0, 40deg) scaleX(0.98) translateY(-75%);
+                transform: scaleY(-1) perspective(300px) rotate3d(-1, 0, 0, 45deg) scaleX(0.9) translateY(-85%) translateX(-4%);
                 filter: grayscale(0.3) brightness(0.5) blur(4px);
-                opacity: 0.4;
+                opacity: 0.8;
                 user-select: none;
                 -webkit-user-drag: none;
             }

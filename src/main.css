@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .PrettyTitle {
-    --text-color: #cca4b5;
+    --text-color: var(--accent-a12);
     background: radial-gradient(circle 300px at 30% -180%, var(--text-color) 0%, #ffffff 100%);
     background-clip: text;
     -webkit-background-clip: text;

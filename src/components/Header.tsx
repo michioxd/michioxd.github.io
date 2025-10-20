@@ -16,15 +16,7 @@ export default function HeaderSection({
                 {icons}
             </IconButton>
             <div className={'flex flex-col'}>
-                <Heading
-                    style={
-                        {
-                            '--text-color': '#e2d1d4',
-                        } as React.CSSProperties
-                    }
-                    className={'PrettyTitle'}
-                    size="3"
-                >
+                <Heading className={'PrettyTitle'} size="3">
                     {title}
                 </Heading>
                 <Text size="1" className="!text-[10px]" color="gray">
