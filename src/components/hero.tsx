@@ -10,33 +10,108 @@ import bg5 from '../assets/bg/5.png';
 import bg6 from '../assets/bg/6.png';
 import bg7 from '../assets/bg/7.png';
 import bg8 from '../assets/bg/8.png';
+import { radixColors } from '../types/colors';
+import { useTheme } from '../theme';
+import { IconButton, Tooltip } from '@radix-ui/themes';
+import { PiCaretLeft, PiCaretRight } from 'react-icons/pi';
 
-const listOfBg = [bg0, bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8];
+const bgs: {
+    src: string;
+    accent: radixColors;
+}[] = [
+    {
+        src: bg0,
+        accent: 'plum',
+    },
+    {
+        src: bg1,
+        accent: 'crimson',
+    },
+    {
+        src: bg2,
+        accent: 'blue',
+    },
+    {
+        src: bg3,
+        accent: 'pink',
+    },
+    {
+        src: bg4,
+        accent: 'plum',
+    },
+    {
+        src: bg5,
+        accent: 'indigo',
+    },
+    {
+        src: bg6,
+        accent: 'ruby',
+    },
+    {
+        src: bg7,
+        accent: 'teal',
+    },
+    {
+        src: bg8,
+        accent: 'lime',
+    },
+];
 
 export default function Hero() {
-    const [bg, setBg] = useState<string>(() => {
+    const { setColor } = useTheme();
+    const [indexBg, setIndexBg] = useState<number>(() => {
         const turn = localStorage.getItem('bg-turn');
-        const index = turn ? parseInt(turn, 10) : 0;
-        return listOfBg[index] || listOfBg[0];
+        return turn ? parseInt(turn, 10) : 0;
     });
 
     useEffect(() => {
         const turn = parseInt(localStorage.getItem('bg-turn') || '0');
-        const nextIndex = (turn + 1) % listOfBg.length;
+        const nextIndex = (turn + 1) % bgs.length;
         localStorage.setItem('bg-turn', nextIndex.toString());
-        setBg(listOfBg[nextIndex]);
+        setIndexBg(nextIndex);
     }, []);
+
+    useEffect(() => {
+        if (setColor) {
+            if (bgs[indexBg].accent) {
+                setColor(bgs[indexBg].accent);
+            }
+        }
+    }, [indexBg, setColor]);
+
+    const changeBg = (next: boolean) => {
+        const newIndex = next ? (indexBg + 1) % bgs.length : (indexBg - 1 + bgs.length) % bgs.length;
+        localStorage.setItem('bg-turn', newIndex.toString());
+        setIndexBg(newIndex);
+    };
 
     return (
         <div className={cls.mainHero}>
             <div
-                className={cn(cls.hero, 'w-full flex flex-col')}
+                className={cn(cls.hero, 'w-full flex flex-col group')}
                 style={
                     {
-                        '--bg': `url(${bg})`,
+                        '--bg': `url(${bgs[indexBg].src})`,
                     } as React.CSSProperties
                 }
-            ></div>
+            >
+                <div
+                    className={cn(
+                        'w-full flex flex-row justify-between absolute bottom-0 p-2 z-10 duration-300 group-hover:opacity-100 opacity-0',
+                    )}
+                >
+                    <Tooltip content="Previous Background" side="top">
+                        <IconButton onClick={() => changeBg(false)} variant="soft">
+                            <PiCaretLeft size={20} />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip content="Next Background" side="top">
+                        <IconButton onClick={() => changeBg(true)} variant="soft">
+                            <PiCaretRight size={20} />
+                        </IconButton>
+                    </Tooltip>
+                </div>
+            </div>
             <div className={cn(cls.heroReflect)}>
                 <div className={cn(cls.content)}>
                     <h2 className={cn(cls.main, 'PrettyTitle text-2xl absolute m-2 ml-4 z-10')}>
@@ -54,7 +129,7 @@ export default function Hero() {
                     className={cn(cls.reflect)}
                     style={
                         {
-                            '--bg': `url(${bg})`,
+                            '--bg': `url(${bgs[indexBg].src})`,
                         } as React.CSSProperties
                     }
                 ></div>

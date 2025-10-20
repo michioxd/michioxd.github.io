@@ -11,6 +11,7 @@
         position: relative;
         border: 1px solid #ffffff17;
         border-bottom: none;
+        transition: 0.3s;
 
         &::after {
             content: '';
@@ -48,6 +49,7 @@
             box-shadow: inset 0 0 12px #ffffff38;
             user-select: none;
             -webkit-user-drag: none;
+            transition: 0.3s;
 
             @media only screen and (max-width: 720px) {
                 background-size: 720px;
@@ -57,6 +59,10 @@
         }
 
         .content {
+            .main {
+                transition: 0.3s;
+            }
+
             .textButReflect {
                 transform: scaleY(-1) perspective(300px) rotate3d(-1, 0, 0, 45deg) scaleX(0.9) translateY(-85%) translateX(-4%);
                 filter: grayscale(0.3) brightness(0.5) blur(4px);
