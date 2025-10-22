@@ -8,6 +8,9 @@ import MFS from "./../assets/projects/mfs.webp";
 import nyaadenwa from "./../assets/projects/nyaadenwa.png";
 import bakafiles from "./../assets/projects/bakafiles.png";
 import materialIconPicker from './../assets/projects/material-icon-picker.png';
+import monsubcu from './../assets/projects/monsubcu.jpg';
+import minevncloud from './../assets/projects/minevncloud.png';
+
 
 const Projects = [
     {
@@ -157,6 +160,44 @@ const Projects = [
             {
                 name: "Fanpage",
                 url: "https://www.facebook.com/profile.php?id=61573406124701"
+            }
+        ]
+    },
+    {
+        image: monsubcu,
+        name: "Mon Fansub - Doraemon 1979",
+        description: "Mon Fansub sub website for Doraemon 1979 series",
+        type: "Web",
+        tech: [
+            "React",
+            "TypeScript",
+            "tRPC"
+        ],
+        buttons: [
+            {
+                name: "Website",
+                url: "https://www.monsubcu.com"
+            },
+            {
+                name: "Fanpage",
+                url: "https://www.facebook.com/profile.php?id=61573406124701"
+            }
+        ]
+    },
+    {
+        image: minevncloud,
+        name: "MineVN Cloud",
+        description: "MineVN Cloud Client dashboard",
+        type: "Web",
+        tech: [
+            "React",
+            "TypeScript",
+            "tRPC"
+        ],
+        buttons: [
+            {
+                name: "Website",
+                url: "https://dash.minevn.cloud"
             }
         ]
     },
