@@ -56,7 +56,7 @@ const Projects = [
     },
     {
         image: genbokeh,
-        name: "GenBokeh",
+        name: "genbokeh",
         type: "Tools",
         description: "A modern web application that generates beautiful bokeh wallpapers using HTML5 Canvas and Web Workers. Built with TypeScript, Vite, and dat.GUI",
         tech: [
