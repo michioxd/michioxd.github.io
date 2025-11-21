@@ -10,7 +10,7 @@ import bakafiles from "./../assets/projects/bakafiles.png";
 import materialIconPicker from './../assets/projects/material-icon-picker.png';
 import monsubcu from './../assets/projects/monsubcu.jpg';
 import minevncloud from './../assets/projects/minevncloud.png';
-
+import genbokeh from './../assets/projects/genbokeh.png';
 
 const Projects = [
     {
@@ -51,6 +51,25 @@ const Projects = [
             {
                 name: "Chrome",
                 url: 'https://chromewebstore.google.com/detail/luckit/gkpedjnafgjmkjlcfcgcjonblhjiifmo'
+            }
+        ]
+    },
+    {
+        image: genbokeh,
+        name: "GenBokeh",
+        type: "Tools",
+        description: "A modern web application that generates beautiful bokeh wallpapers using HTML5 Canvas and Web Workers. Built with TypeScript, Vite, and dat.GUI",
+        tech: [
+            "TypeScript"
+        ],
+        buttons: [
+            {
+                name: "GitHub",
+                url: "https://github.com/michioxd/genbokeh"
+            },
+            {
+                name: "Website",
+                url: "https://genbokeh.michioxd.ch"
             }
         ]
     },
