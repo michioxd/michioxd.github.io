@@ -271,7 +271,7 @@ function App() {
                                                 link="https://en.wikipedia.org/wiki/GNU_Privacy_Guard"
                                                 name="GPG key"
                                                 title="GPG (GNU Privacy Guard)"
-                                            />. My latest GPG key can be found on <Link color="gray" href={"https://keys.openpgp.org/search?q=" + GPGKey} className="!underline" target="_blank">keys.openpgp.org</Link>.
+                                            />. My latest GPG key can be found on <Link color="gray" href={"https://keys.openpgp.org/search?q=neko@michioxd.ch"} className="!underline" target="_blank">keys.openpgp.org</Link>.
                                         </Text>
                                         <div className='flex flex-col gap-0'>
                                             <Text size="1" color="gray">
