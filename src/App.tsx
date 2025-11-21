@@ -1,5 +1,5 @@
 import { Avatar, Badge, Button, Card, Flex, Grid, Heading, HoverCard, IconButton, Link, Text } from '@radix-ui/themes';
-import { PiCodeDuotone, PiInfoDuotone, PiLinkDuotone, PiMagicWandDuotone, PiPhoneCallDuotone } from 'react-icons/pi';
+import { PiCodeDuotone, PiDownloadDuotone, PiInfoDuotone, PiLinkDuotone, PiLockDuotone, PiMagicWandDuotone, PiPhoneCallDuotone } from 'react-icons/pi';
 import Hero from './components/hero';
 import skills from './data/skills';
 import Footer from './components/Footer';
@@ -9,6 +9,8 @@ import { cn } from './utils/class';
 import { ListContact, ListOther } from './data/contact';
 import HeaderSection from './components/Header';
 import Instructions from './components/instructions';
+
+const GPGKey = "0AE35740A8756C89AF01BA543D6E98A548407572";
 
 const Projects = () => {
     return (
@@ -252,6 +254,43 @@ function App() {
                                                 </HoverCard.Content>
                                             </HoverCard.Root>
                                         ))}
+                                    </div>
+                                </Card>
+                            </div>
+                            <div className="relative">
+                                <Card size="2">
+                                    <HeaderSection
+                                        icons={<PiLockDuotone size={24} />}
+                                        title="gpg key"
+                                        subtitle="ensure that's me!"
+                                    />
+                                    <div className="mt-2 flex flex-col gap-2">
+                                        <Text size="1" color="gray">
+                                            To verify my signed emails, software releases and commits. You may need my public <Instructions
+                                                content="GPG (GNU Privacy Guard) is a free encryption software that provides cryptographic privacy and authentication through public-key cryptography, commonly used for securing communications and data."
+                                                link="https://en.wikipedia.org/wiki/GNU_Privacy_Guard"
+                                                name="GPG key"
+                                                title="GPG (GNU Privacy Guard)"
+                                            />. My latest GPG key can be found on <Link color="gray" href={"https://keys.openpgp.org/search?q=" + GPGKey} className="!underline" target="_blank">keys.openpgp.org</Link>.
+                                        </Text>
+                                        <div className='flex flex-col gap-0'>
+                                            <Text size="1" color="gray">
+                                                Current GPG Key Fingerprint (SHA-1) (01-07-2027):
+                                            </Text>
+                                            <Text asChild size="1">
+                                                <code className='select-all'>
+                                                    {GPGKey.match(/.{1,4}/g)?.join(' ')}
+                                                </code>
+                                            </Text>
+                                        </div>
+                                        <div className='flex justify-end w-full'>
+                                            <Button className='!w-fit' size="1" asChild variant="soft">
+                                                <a href={"https://keys.openpgp.org/vks/v1/by-fingerprint/" + GPGKey} target="_blank" rel="noreferrer">
+                                                    <PiDownloadDuotone size={14} />
+                                                    Download GPG Key
+                                                </a>
+                                            </Button>
+                                        </div>
                                     </div>
                                 </Card>
                             </div>
