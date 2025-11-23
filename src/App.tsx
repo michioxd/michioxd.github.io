@@ -308,8 +308,8 @@ function App() {
                                     />
                                     <div className="mt-2 flex-col flex gap-2">
                                         {ListContact.map((contact, index) => (
-                                            <Link key={index} href={contact.url} target="_blank">
-                                                <Card className="!flex flex-row gap-2">
+                                            <Card asChild className="!flex !flex-row !gap-2 !no-underline">
+                                                <Link key={index} href={contact.url} target="_blank">
                                                     <IconButton size="3" variant="soft" color={contact.color}>
                                                         {contact.icon}
                                                     </IconButton>
@@ -321,8 +321,8 @@ function App() {
                                                             {contact.sub}
                                                         </Text>
                                                     </div>
-                                                </Card>
-                                            </Link>
+                                                </Link>
+                                            </Card>
                                         ))}
                                     </div>
                                     <div className="mt-2">
@@ -344,8 +344,8 @@ function App() {
                                     />
                                     <div className="mt-2 flex-col flex gap-2">
                                         {ListOther.map((contact, index) => (
-                                            <Link key={index} href={contact.url} target="_blank">
-                                                <Card className="!flex flex-row gap-2">
+                                            <Card asChild className="!flex flex-row !gap-2 !no-underline">
+                                                <Link key={index} href={contact.url} target="_blank">
                                                     <IconButton size="3" variant="soft" color={contact.color}>
                                                         {contact.icon}
                                                     </IconButton>
@@ -357,8 +357,8 @@ function App() {
                                                             {contact.sub}
                                                         </Text>
                                                     </div>
-                                                </Card>
-                                            </Link>
+                                                </Link>
+                                            </Card>
                                         ))}
                                     </div>
                                 </Card>
