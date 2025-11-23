@@ -275,7 +275,7 @@ function App() {
                                         </Text>
                                         <div className='flex flex-col gap-0'>
                                             <Text size="1" color="gray">
-                                                Current GPG Key Fingerprint (SHA-1) (01-07-2027):
+                                                Current GPG Key Fingerprint (SHA-1):
                                             </Text>
                                             <Text asChild size="1">
                                                 <code className='select-all'>
