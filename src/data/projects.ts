@@ -24,12 +24,12 @@ const Projects = [
         tech: ['WebAssembly', 'TypeScript'],
         buttons: [
             {
-                name: 'Website',
-                url: 'https://nyantracker.michioxd.ch',
-            },
-            {
                 name: 'GitHub',
                 url: 'https://github.com/michioxd/nyantracker',
+            },
+            {
+                name: 'Website',
+                url: 'https://nyantracker.michioxd.ch',
             },
         ],
     },
