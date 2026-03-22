@@ -12,8 +12,27 @@ import monsubcu from './../assets/projects/monsubcu.jpg';
 import minevncloud from './../assets/projects/minevncloud.png';
 import genbokeh from './../assets/projects/genbokeh.png';
 import osuspace from './../assets/projects/osu-space.png';
+import nyantracker from './../assets/projects/nyantracker.png';
 
 const Projects = [
+    {
+        image: nyantracker,
+        name: 'nyantracker',
+        type: 'Player',
+        description:
+            'Simple web-based music tracker player. With pattern/oscilloscope view and various tracker modules.',
+        tech: ['WebAssembly', 'TypeScript'],
+        buttons: [
+            {
+                name: 'Website',
+                url: 'https://nyantracker.michioxd.ch',
+            },
+            {
+                name: 'GitHub',
+                url: 'https://github.com/michioxd/nyantracker',
+            },
+        ],
+    },
     {
         image: osuspace,
         name: 'osu!space',
