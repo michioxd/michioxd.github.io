@@ -46,7 +46,7 @@ const Projects = [
             },
             {
                 name: 'Demo Video',
-                url: 'https://www.youtube.com/watch?v=SPX424BGhfs',
+                url: 'https://www.youtube.com/watch?v=Q-KHIsqJ-5E',
             },
         ],
     },
