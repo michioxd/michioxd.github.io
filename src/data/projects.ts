@@ -13,8 +13,22 @@ import minevncloud from './../assets/projects/minevncloud.png';
 import genbokeh from './../assets/projects/genbokeh.png';
 import osuspace from './../assets/projects/osu-space.png';
 import nyantracker from './../assets/projects/nyantracker.png';
+import foo_opensubsonic from './../assets/projects/foo_opensubsonic.png';
 
 const Projects = [
+    {
+        image: foo_opensubsonic,
+        name: 'foo_opensubsonic',
+        type: 'fb2k component',
+        description: 'OpenSubsonic/Navidrome client implementation for foobar2000',
+        tech: ['C++'],
+        buttons: [
+            {
+                name: 'GitHub',
+                url: 'https://github.com/michioxd/foo_opensubsonic',
+            },
+        ],
+    },
     {
         image: nyantracker,
         name: 'nyantracker',
